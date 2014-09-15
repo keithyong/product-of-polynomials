@@ -114,11 +114,10 @@ int main(){
 	shiftArrayBackByOne(array1);
 	shiftArrayBackByOne(array2);
  
-	printf("num1 = %d\n", num1);
-	printf("num2 = %d\n", num2);
- 
-	printPoly(array1, countOne - 1);
-	printPoly(array2, countTwo - 1);
+ 	printf("f(x) = ");
+	printPoly(array1, num1);
+	printf("g(x) = ");
+	printPoly(array2, num2);
 	
 	for(int i = 0; i < num2; i++) {
 		for(int j = 0; j < num1; j++) {
@@ -126,8 +125,7 @@ int main(){
 		}
 	}
 	
+	printf("f(x)g(x) = ");
 	printPoly(results, (num1 + num2 - 1));
 	printf("f(1)g(1) = %d\n", fofx(results, (num1 + num2 - 1), 1));
-	
-	
 }
